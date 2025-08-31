@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make Your Trip Easy</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    body { background:#121212; color:#eee; line-height:1.6; }
+    header { background:#1f1f1f; padding:20px; text-align:center; position:sticky; top:0; z-index:1000; }
+    header h2 { color:#ffb703; font-size:1.8rem; }
+    nav a { margin:0 15px; text-decoration:none; color:#eee; font-weight:500; transition:0.3s; }
+    nav a:hover { color:#ffb703; }
+
+    .hero {
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center; position:relative; color:#fff;
+    }
+    .hero::after {
+      content:""; position:absolute; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.55);
+    }
+    .hero-content { position:relative; z-index:1; text-align:center; }
+    .hero h1 { font-size:3.2rem; margin-bottom:15px; text-shadow:2px 2px 12px #000; }
+    .btn {
+      padding:14px 30px; border:none; border-radius:30px; background:#ffb703;
+      color:#121212; font-weight:bold; cursor:pointer; transition:0.3s;
+    }
+    .btn:hover { background:#ffd166; }
+
+    section { padding:60px 30px; text-align:center; }
+    section h2 { margin-bottom:30px; font-size:2rem; color:#ffb703; }
+
+    .destinations {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:25px;
+    }
+    .card {
+      background:#1f1f1f; border-radius:15px; overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.6); transition:0.3s;
+    }
+    .card:hover { transform:translateY(-8px); }
+    .card img { width:100%; height:200px; object-fit:cover; }
+    .card h3 { margin:15px; color:#ffb703; }
+    .card p { margin:0 15px 20px; font-size:0.95rem; }
+
+    .about {
+      padding:60px 30px; background:#1f1f1f;
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:40px;
+      text-align:left;
+    }
+    .about img {
+      width:180px; height:180px; border-radius:50%; object-fit:cover;
+      border:3px solid #ffb703;
+    }
+    .about-text h2 { color:#ffb703; margin-bottom:20px; }
+    .about-text p { color:#ddd; }
+
+    .reviews { padding:60px 30px; }
+    .review-cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:25px;
+    }
+    .review {
+      background:#1f1f1f; border-radius:15px; padding:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.6);
+    }
+    .review p { font-style:italic; color:#ccc; }
+    .review h4 { margin-top:15px; color:#ffb703; }
+
+    footer {
+      background:#1f1f1f; color:#aaa; text-align:center;
+      padding:20px; margin-top:40px;
+    }
+    footer a { color:#ffb703; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>🌍 Make Your Trip Easy</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#about">About Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Explore the World, One Journey at a Time</h1>
+      <button class="btn">Book Your Adventure</button>
+    </div>
+  </div>
+
+  <section id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="destinations">
+      <div class="card">
+        <img src="image1/new york.jpg" alt="New York">
+        <h3>New York, USA</h3>
+        <p>Times Square, Central Park, and iconic skyline views.</p>
+      </div>
+      <div class="card">
+        <img src="image1/Tokyo.jpg" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+        <p>Cherry blossoms, neon lights, and rich cultural landmarks.</p>
+      </div>
+      <div class="card">
+        <img src="image1/dubai.jpg" alt="Dubai Placeholder">
+        <h3>Dubai, UAE</h3>
+        <p>Modern skyline with luxury, culture, and desert adventure.</p>
+      </div>
+      <div class="card">
+        <img src="image1/swiss alps.jpg" alt="Swiss Alps Placeholder">
+        <h3>Swiss Alps</h3>
+        <p>Snow-capped peaks, lush valleys, and pristine alpine lakes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <img src="https://img.icons8.com/fluency/240/airplane-take-off.png" alt="Logo">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>At <b>Make Your Trip Easy</b>, we make travel simple, affordable, and unforgettable. Let us handle the planning while you enjoy the adventure.</p>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <h2>What Our Travelers Say</h2>
+    <div class="review-cards">
+      <div class="review">
+        <p>"A seamless experience! Everything was professionally handled."</p>
+        <h4>- Priya Sharma</h4>
+      </div>
+      <div class="review">
+        <p>"Tokyo was magical. Exceptional service and planning."</p>
+        <h4>- Rohan Mehta</h4>
+      </div>
+      <div class="review">
+        <p>"Switzerland trip was perfect! Beautifully curated itinerary."</p>
+        <h4>- Neha Patel</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Make Your Trip Easy | Designed with ❤ by Ramoliya Bansi</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
+</body>
+</html>
